@@ -1,4 +1,4 @@
-package actionsClass;
+package assignmentDemoWebShop;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class BaseClass {
-	protected static WebDriver driver;
+	static WebDriver driver;
 
 	public static void setUp(String browser, int seconds, String url) {
 		if (browser.equalsIgnoreCase("chrome"))
