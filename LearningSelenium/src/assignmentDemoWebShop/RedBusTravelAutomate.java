@@ -9,6 +9,8 @@ public class RedBusTravelAutomate extends BaseClass {
 	public static void main(String[] args) throws InterruptedException {
 		
 		 setUp("chrome",20,"https://www.redbus.in/");
+		 
+		 
 		 driver.findElement(By.xpath("//span[text()='Bus Tickets']")).click();
 		
 		driver.findElement(By.xpath("//input[@class='sc-bxivhb dsDRlf']")).sendKeys("Delhi");
@@ -17,18 +19,18 @@ public class RedBusTravelAutomate extends BaseClass {
 		driver.findElement(By.xpath("//input[@id='dest']")).sendKeys("Agra");
 		driver.findElement(By.xpath("//text[text()='Agra']")).click();
 		
-		//driver.findElement(By.xpath("//text[@class='dateText']")).click();
-		
-	 /*	WebElement scrollTill = driver.findElement(By.xpath("//text[@class='dateText']"));
-		
-		Thread.sleep(2000);
-		// perform explicit typecasting
 		JavascriptExecutor j = (JavascriptExecutor) driver;
-	
-		j.executeScript("arguments[0].scrollIntoView(true)",scrollTill);
+		for (int i = 0; i < 1; i++) {
+			j.executeScript("window.scrollBy(0,100)");
+			Thread.sleep(2000);
+		}
 
-		driver.findElement(By.xpath("//span[text()='16']")).click();*/
 		
+		driver.findElement(By.xpath("//text[@class='dateText']")).click();
+		Thread.sleep(2000);
+	 	driver.findElement(By.xpath("//span[text()='13']")).click();
+		
+		driver.findElement(By.xpath("//button[text()='SEARCH BUSES']")).click();
 
 	}
 
